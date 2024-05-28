@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  server:
+    container_name: server_container
+    image: live_chat_server
+    build:
+      context: ./server
+    ports:
+      - 5000:5000
+  client:
+    container_name: client_container
+    image: live_chat_client
+    build:
+      context: ./client
+    ports:
+      - 3000:3000
